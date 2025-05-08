@@ -10,3 +10,4 @@ faiss-cpu
 transformers
 huggingface-hub
 python-dotenv
+streamlit
