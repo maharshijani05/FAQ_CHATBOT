@@ -13,9 +13,9 @@ from dotenv import load_dotenv
 import os
 
 # Load .env once when module is loaded
-load_dotenv()
 api_key = os.getenv("GROQ_API_KEY")
-assert api_key, "GROQ_API_KEY not found in .env file!"
+if not api_key:
+    raise EnvironmentError("GROQ_API_KEY not found in environment variables.")
 
 # Load FAQ file and initialize chain at module level
 faq_path = os.path.join(os.path.dirname(__file__), "faq.txt")

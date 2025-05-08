@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from faq_chatbot import run_faq_bot
+import os 
 
 app = Flask(__name__)
 
@@ -12,5 +13,6 @@ def run_bot():
     response = run_faq_bot(question, session_id)
     return jsonify({'response': response})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 10000))  # fallback if PORT not set
+    app.run(host="0.0.0.0", port=port)
