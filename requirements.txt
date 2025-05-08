@@ -1,0 +1,12 @@
+flask
+openai
+langchain
+langchain-community
+langchain-core
+langchain-groq
+langchain-huggingface
+langchain-text-splitters
+faiss-cpu
+transformers
+huggingface-hub
+python-dotenv
