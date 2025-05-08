@@ -14,5 +14,6 @@ def run_bot():
     return jsonify({'response': response})
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 10000))  # fallback if PORT not set
+    port = int(os.environ["PORT"])
+    print(f"Starting server on port {port}")
     app.run(host="0.0.0.0", port=port)
