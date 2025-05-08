@@ -3,7 +3,7 @@ from faq_chatbot import run_faq_bot
 
 st.set_page_config(page_title="FAQ Chatbot", page_icon="💬", layout="centered")
 
-st.title("💬 FAQ Chatbot")
+st.title("💬 FAQ Chatbot for BudgetPro")
 st.markdown("Ask any question based on the FAQ document.")
 
 # Session state for chat history
